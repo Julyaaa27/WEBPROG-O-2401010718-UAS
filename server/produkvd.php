@@ -2,17 +2,17 @@
     global $koneksi;
     include_once("konfigurasi.php");
 
-    $sql = "SELECT id, nama_produk, harga, stok, tanggal_masuk FROM produk;";
+    $sql = "SELECT id, nama_produk, harga, stok, tgl_masuk FROM produk;";
     $ps = mysqli_query($koneksi, $sql);
 
-    $h = []; // pastikan variabel array diinisialisasi
-    while ($RES = mysqli_fetch_assoc($ps)) {
+    $h = []; 
+    while ($res = mysqli_fetch_assoc($ps)) {
         $h[] = array(
-            "id" => $RES["id"],
-            "nama_produk" => $RES["nama_produk"],
-            "harga" => $RES["harga"],
-            "stok" => $RES["stok"],
-            "tanggal_masuk" => $RES["tanggal_masuk"],
+            "id"          => $res["id"],
+            "nama_produk" => $res["nama_produk"],
+            "harga"       => $res["harga"],
+            "stok"        => $res["stok"],
+            "tgl_masuk"   => $res["tgl_masuk"],
         );
     }
 

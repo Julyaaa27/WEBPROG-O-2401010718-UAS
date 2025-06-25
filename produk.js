@@ -3,7 +3,7 @@ function caridata(){
     let params = new URLSearchParams(query);
     let idProduk = params.get("id");
 
-    let urltarget = "http://localhost/pertemuan14/server/produkbyid.php";
+    let urltarget = "server/produkbyid.php";
     let dataSend = `id=${idProduk}`;
     $.ajax({
         url: urltarget,
@@ -11,7 +11,7 @@ function caridata(){
         dataType: 'json',
         data: dataSend,
         success: function(response){
-            // Asumsikan response["isi"] berisi data produk
+            
             $("#txID").val(response["isi"]["id"]);
             $("#txNamaProduk").val(response["isi"]["nama_produk"]);
             $("#txHarga").val(response["isi"]["harga"]);

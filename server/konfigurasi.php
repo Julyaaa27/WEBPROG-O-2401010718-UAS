@@ -2,7 +2,7 @@
     define("DBHOST", "localhost");
     define("DBUSERNAME", "root");
     define("DBPASSWORD", "");
-    define("DBNAME", "produk");  // Nama database diubah dari 'mahasiswa' ke 'produk'
+    define("DBNAME", "produk"); 
     define("DBPORT", "3306");
 
     global $koneksi;
